@@ -1,0 +1,229 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  max-width: 850px;
+  width: 92%;
+  margin: 50px auto;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.app-container h1 {
+  text-align: center;
+  color: #1e293b;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+/* Todo Form */
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.todo-form input,
+.todo-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  font-family: inherit;
+}
+
+.todo-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.todo-form input:focus,
+.todo-form textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.form-buttons button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-buttons button:hover {
+  background: #4338ca;
+}
+
+.form-buttons button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-buttons .cancel-btn {
+  background: #64748b;
+}
+
+.form-buttons .cancel-btn:hover {
+  background: #475569;
+}
+
+/* Todo List */
+
+.todo-list h2 {
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #94a3b8;
+  padding: 30px 10px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+/* Todo Card */
+
+.todo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+  transition: 0.3s ease;
+}
+
+.todo-card:hover {
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  transform: translateY(-2px);
+}
+
+.todo-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-content h3 {
+  color: #334155;
+  margin-bottom: 8px;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.todo-content p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 12px;
+  overflow-wrap: anywhere;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #94a3b8 !important;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.status input {
+  accent-color: #16a34a;
+  cursor: pointer;
+}
+
+/* Action Buttons */
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-actions button {
+  padding: 9px 15px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #2563eb;
+}
+
+.edit-btn:hover {
+  background: #1d4ed8;
+}
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+  .app-container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px 15px;
+  }
+
+  .app-container h1 {
+    font-size: 25px;
+  }
+
+  .todo-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .todo-actions {
+    width: 100%;
+  }
+
+  .todo-actions button {
+    flex: 1;
+  }
+
+  .form-buttons button {
+    flex: 1;
+  }
+}
